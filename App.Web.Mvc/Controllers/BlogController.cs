@@ -9,7 +9,6 @@ namespace App.Web.Mvc.Controllers
 			return View();
 		}
 
-		[Route("blog/title-{id}")]
 		public IActionResult Detail(int id)
 		{
 			return View();

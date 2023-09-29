@@ -4,7 +4,6 @@ namespace App.Web.Mvc.Controllers
 {
 	public class CategoryController : Controller
 	{
-		[Route("category/category-{page}")]
 		public IActionResult Index(int id, int page)
 		{
 			return View();
