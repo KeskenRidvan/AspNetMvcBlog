@@ -2,7 +2,7 @@
 
 namespace App.Web.Mvc.Controllers
 {
-	public class AdminUser : Controller
+	public class AdminBlogController : Controller
 	{
 		public IActionResult Index()
 		{
