@@ -37,7 +37,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
 
                     b.HasData(
                         new
@@ -74,7 +74,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("CategoryPosts");
+                    b.ToTable("CategoryPosts", (string)null);
 
                     b.HasData(
                         new
@@ -114,7 +114,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pages");
+                    b.ToTable("Pages", (string)null);
 
                     b.HasData(
                         new
@@ -165,7 +165,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Posts", (string)null);
 
                     b.HasData(
                         new
@@ -214,7 +214,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("PostComments");
+                    b.ToTable("PostComments", (string)null);
                 });
 
             modelBuilder.Entity("App.Web.Mvc.Data.Entity.PostImage", b =>
@@ -236,7 +236,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("PostImages");
+                    b.ToTable("PostImages", (string)null);
 
                     b.HasData(
                         new
@@ -272,7 +272,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("App.Web.Mvc.Data.Entity.User", b =>
@@ -303,7 +303,7 @@ namespace App.Web.Mvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasData(
                         new
