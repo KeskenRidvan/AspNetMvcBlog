@@ -25,9 +25,11 @@ namespace App.Web.Mvc.Data.Entity
 		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
 		public DateTime Date { get; set; }
 
-		public List<CategoryPost> CategoryPosts { get; set; }
-
 		public int UserId { get; set; }
 		public User User { get; set; }
+
+		public IEnumerable<CategoryPost> CategoryPosts { get; set; }
+		public IEnumerable<PostImage> Images { get; set; }
+		public IEnumerable<PostComment> Comments { get; set; }
 	}
 }
