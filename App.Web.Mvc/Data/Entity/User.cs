@@ -11,24 +11,24 @@ namespace App.Web.Mvc.Data.Entity
 		public int Id { get; set; }
 
 		[Required(ErrorMessage = "{0} boş geçilemez.")]
-		[DisplayName("Kullanıcı Adı")]
+		[DisplayName("Adı")]
 		[StringLength(50, ErrorMessage = "{0} {1} karakterden fazla olamaz!")]
 		[MinLength(3, ErrorMessage = "{0} en az {1} karakter olabilir!")]
 		public string Name { get; set; }
 
 		[Required(ErrorMessage = "{0} boş geçilemez.")]
-		[DisplayName("Kullanıcı Soyadı")]
+		[DisplayName("Soyadı")]
 		[StringLength(50, ErrorMessage = "{0} {1} karakterden fazla olamaz!")]
 		[MinLength(3, ErrorMessage = "{0} en az {1} karakter olabilir!")]
 		public string Surname { get; set; }
 
 		[Required(ErrorMessage = "{0} boş geçilemez.")]
-		[DisplayName("Kullanıcı E-Mail")]
+		[DisplayName("E-Mail")]
 		[EmailAddress(ErrorMessage = "Yanlış bir mail girdiniz.")]
 		public string Email { get; set; }
 
 		[Required(ErrorMessage = "{0} boş geçilemez.")]
-		[DisplayName("Kullanıcı E-Mail")]
+		[DisplayName("Şifre")]
 		[PasswordPropertyText]
 		public string Password { get; set; }
 	}
