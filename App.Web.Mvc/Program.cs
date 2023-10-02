@@ -1,14 +1,19 @@
-using App.Web.Mvc.Data;
+using App.Persistence;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AppDbContext>(options =>
+
+builder.Services.AddDbContext<AppDbContext>(x =>
 {
-	options.UseSqlServer(builder.Configuration.GetConnectionString("DBConStr"));
+	x.UseSqlServer(builder.Configuration.GetConnectionString("DBConStr"), option =>
+	{
+		option.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
+	});
 });
 
 
