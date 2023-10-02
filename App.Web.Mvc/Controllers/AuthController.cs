@@ -1,5 +1,4 @@
-﻿using App.Web.Mvc.Data;
-using App.Web.Mvc.Data.Entity;
+﻿using App.Core.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace App.Web.Mvc.Controllers
@@ -7,17 +6,16 @@ namespace App.Web.Mvc.Controllers
 	public class AuthController : Controller
 	{
 
-		private readonly AppDbContext _context;
+		private readonly IUserService _userService;
 
-		public AuthController(AppDbContext context)
+		public AuthController(IUserService userService)
 		{
-			_context = context;
+			_userService = userService;
 		}
 
 		[HttpGet]
 		public IActionResult Register()
 		{
-			User user = new User();
 			return View();
 		}
 
